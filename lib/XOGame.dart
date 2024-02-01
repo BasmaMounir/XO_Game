@@ -238,15 +238,14 @@ class _XOGameState extends State<XOGame> {
     Widget okButton = TextButton(
       child: Text("Continue"),
       onPressed: () {
-        Navigator.pop(context);
+          Navigator.of(context).pop();
       },
     );
 
     AlertDialog alert = AlertDialog(
-      title: Text("✨ Congratulations $PlayerName ✨"),
-      content: Image.network(
-          'https://media.tenor.com/a1VADuLpJLQAAAAj/%E3%81%8A%E3%82%81%E3%81%A7%E3%81%A8%E3%81%86-%E3%81%8A%E7%A5%9D%E3%81%84.gif'),
-      actions: [
+      title: Text("✨ Congratulations $PlayerName"),
+     content:Image.asset('assets/images/img.png'),
+              actions: [
         okButton,
       ],
     );
